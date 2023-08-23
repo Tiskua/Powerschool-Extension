@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Powerschool Plus",
+  "version": "1.0",
+  "description": "Improve the look of Powerschool",
+
+  "action": {
+    "default_popup" : "popup/popup.html",
+    "default_title": "A POPUP WILL APPEAR"
+  },
+
+  "content_scripts": [
+    {
+      
+      "matches": [
+        "https://powerschool.hermitagesd.net/public/*"
+      ],
+
+      "css" : ["CSS/login.css"]
+    },
+    {
+      
+      "matches": [
+        "https://powerschool.hermitagesd.net/guardian/*"
+      ],
+
+      "css" : ["CSS/main.css"]
+    },
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://powerschool.hermitagesd.net/guardian/home*"
+      ],
+      "css" : ["CSS/main.css"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+    
+  ]
+}

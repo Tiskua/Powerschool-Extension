@@ -1,0 +1,70 @@
+:root {
+    --textColor: rgb(219, 219, 219);
+    --bgColor: black;
+    --secondaryBgColor: rgb(27,27,27);
+    --bgGradient: linear-gradient(to bottom right, rgb(27, 27, 27), rgb(46, 46, 46));
+}
+
+
+body {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: left top !important;
+    background-image: var(--bgGradient) !important;
+    color: var(--textColor) !important;
+}
+
+.pslogin #content {
+    background-color: var(--secondaryBgColor) !important;
+    border-radius: 10px;
+    scale: 1.4;
+    margin-top: 25%;
+}
+
+.ui-tabs .ui-tabs-panel {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+ul.tabs, ul.ui-tabs-nav.ui-corner-all.ui-widget-header {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+.ui-tabs.ui-widget-content {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+
+fieldset>div:not(.button-row) {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+.pslogin fieldset label {
+    color: var(--textColor) !important;
+}
+
+.pslogin fieldset input {
+    background-color: var(--secondaryBgColor) !important;
+    color: var(--textColor);
+    /* border: rgb(201, 201, 201) !important; */
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-color: var(--bgColor) !important;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+div.tabs ul.ui-tabs-nav li a {
+    color: var(--textColor) !important;
+}
+
+.ui-widget-content {
+    color: inherit !important;
+}
+
+.pslogin #branding-powerschool {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

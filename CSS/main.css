@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --textColor: rgb(219, 219, 219);
+    --bgColor: rgb(10, 10, 10);
+    --secondaryBgColor: rgb(27,27,27);
+    --bgGradient: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(22, 22, 22));
+}
+
+#container { 
+    background-color: var(--bgColor);
+    
+}
+
+body {
+    color: var(--textColor) !important;
+    font-family: 'Poppins', sans-serif !important;
+    background-color: var(--bgColor) !important;
+    background-image: none !important;
+}
+
+tbody {
+    background-color: var(--bgColor);
+    font-size: 1.3em !important;
+}
+
+th, td.th, table.grid td.th, table.grid tbody tr:nth-child(odd)>td.th, table.grid tbody.tbody tr:nth-child(odd) th.th {
+    color: var(--textColor) !important;
+    background: var(--secondaryBgColor) !important;
+}
+
+ul.tabs li.selected, li.ui-tabs-selected, div.tabs ul.ui-tabs-nav li.ui-state-active:hover, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    background-color: var(--secondaryBgColor) !important;
+    color: var(--textColor) !important;
+}
+
+#attByClass {
+    background-color: var(--bgColor) !important;
+    color: var(--textColor) !important;
+
+}
+
+#nav-main li.selected {
+    background-color: var(--secondaryBgColor)
+}
+
+table.grid tbody tr:nth-child(odd)>td, table.linkDescList tbody tr:nth-child(odd)>td {
+    background-color:  var(--secondaryBgColor) !important;
+}
+
+table.grid tr:nth-child(even)>td {
+    background-color: var(--bgColor) !important;
+}
+
+#nav-main li a {
+    color: var(--textColor) !important;
+    font-weight: bold !important;
+}
+
+table.grid td {
+    padding: 30px 15px !important;
+}
+
+#header {
+    background-color: var(--bgColor) !important;
+}
+
+#usercontext-bar {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#tools li {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#btnContMax, #btnNoNav {
+    background-color: var(--secondaryBgColor) !important;
+    border: none !important;
+
+}
+
+.box-round {
+    border: none !important;
+}
+
+table.grid td, table.grid th {
+    border: 0.1px solid rgb(39, 39, 39) !important;
+}
+
+#attByClass {
+    font-size: 2em !important;
+    padding-bottom: 1em !important;
+}
+
+ul.tabs li a {
+    color: var(--textColor) !important;
+    font-weight: bold;
+}
+
+#nav-main li.selected, #nav-main-frame li.selected {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+
+#psDialog {
+    background-color: var(--bgColor) !important;
+    color: var(--textColor) !important;
+}
+
+
+.ui-widget-content {
+    background: var(--bgColor) !important;
+}
+
+.ui-dialog .ui-dialog-titlebar, .ui-dialog-titlebar {
+    background-color: var(--bgColor) !important;
+    border: none!;
+}
+
+.tablesorter-blue td {
+    color: var(--textColor) !important;
+}
+
+.pds-icon-sprite {
+    color: var(--bgColor) !important;
+}
+
+ul li {
+    background-color: var(--bgColor) !important;
+}
+
+select, input {
+    background-color: var(--secondaryBgColor) !important;
+    border: none !important;
+    color: var(--textColor) !important;
+}
+
+#attTotal {
+    color: inherit !important;
+}
+
+#legend p,
+#legend strong {
+    color: var(--textColor) !important;
+}
