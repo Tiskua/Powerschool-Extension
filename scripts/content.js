@@ -1,4 +1,3 @@
-
 const tbody = document.getElementsByTagName("tbody")[0];
 const trs = tbody.getElementsByTagName("tr");
 
@@ -87,7 +86,6 @@ for (let i = 0; i < trs.length; i++){
 
 // Show Absent Settings
 
-
 async function setSettingValues() {
   let options = {}
   const data = await chrome.storage.sync.get("options");
@@ -110,10 +108,3 @@ chrome.storage.onChanged.addListener((changes, area) => {
     toggleShowAbsent(showAbsent)
   } 
 });
-
-
-
-
-
-
-

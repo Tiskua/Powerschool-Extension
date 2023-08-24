@@ -17,8 +17,6 @@ body {
 .pslogin #content {
     background-color: var(--secondaryBgColor) !important;
     border-radius: 10px;
-    scale: 1.4;
-    margin-top: 25%;
 }
 
 .ui-tabs .ui-tabs-panel {
@@ -45,7 +43,6 @@ fieldset>div:not(.button-row) {
 .pslogin fieldset input {
     background-color: var(--secondaryBgColor) !important;
     color: var(--textColor);
-    /* border: rgb(201, 201, 201) !important; */
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {

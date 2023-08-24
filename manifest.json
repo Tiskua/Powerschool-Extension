@@ -5,13 +5,12 @@
   "description": "Improve the look of Powerschool",
 
   "action": {
-    "default_popup" : "popup/popup.html",
-    "default_title": "A POPUP WILL APPEAR"
+    "default_popup" : "main_popup/main_popup.html",
+    "default_title": "General Information"
   },
 
   "content_scripts": [
     {
-      
       "matches": [
         "https://powerschool.hermitagesd.net/public/*"
       ],
@@ -37,7 +36,6 @@
   "permissions": [
     "storage",
     "scripting",
-    "activeTab"
-    
+    "activeTab"    
   ]
 }
