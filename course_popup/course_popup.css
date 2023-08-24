@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    background-color: black;
+    color: white;
+    width: 600px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.info-list-txt {
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+.settings-btn {
+    position: absolute;
+    font-size: 3em;
+    text-decoration: none;
+    color: rgb(124, 124, 124);
+    bottom: 20px;
+    left: 20px;
+}
+
+.tabs {
+    margin-bottom: 3rem;
+    float: right;
+}
+
+.tabs li {
+    padding: 1.3rem 2rem;
+    display: inline;
+    background-color: rgb(8, 8, 8);
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+.tabs li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+}
