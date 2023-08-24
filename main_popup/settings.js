@@ -11,4 +11,3 @@ optionsForm.attendance.addEventListener("change", (event) => {
 const data = await chrome.storage.sync.get("options");
 Object.assign(options, data.options);
 optionsForm.attendance.checked = Boolean(options.showAttendance);
-console.log(Boolean(options.showAttendance))

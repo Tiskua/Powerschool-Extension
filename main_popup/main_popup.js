@@ -1,10 +1,13 @@
+
+
 function onWindowLoad() {
     const welcome = document.querySelector('.welcome');
     const classesLabel = document.querySelector('.classes-label');
+    let url = "";
     chrome.tabs.query({ active: true, currentWindow: true }).then(function (tabs) {
         var activeTab = tabs[0];
         var activeTabId = activeTab.id;
-
+        url = activeTab.url;
         return chrome.scripting.executeScript({
             target: { tabId: activeTabId },
             func: DOMtoString,
@@ -15,7 +18,12 @@ function onWindowLoad() {
     }).then(function (results) {
         var parser = new DOMParser();
 	    var body = parser.parseFromString(results[0].result, 'text/html');
-        
+        const courseButton = document.querySelector("#course-btn");
+        if (url.includes("score")) {
+            courseButton.click();
+            return;
+        }
+
         welcome.innerText = getStudentName(body)
         setGPACircularView()
 
@@ -24,8 +32,6 @@ function onWindowLoad() {
         welcome.innerText = 'There was an error injecting script : \n' + error.message;
     });
 }
-
-
 
 window.onload = onWindowLoad;
 
@@ -86,9 +92,6 @@ function getGPA(body) {
 }
 
 
-
-
-
 // Circular GPA View
 
 function setGPACircularView() {
@@ -109,7 +112,6 @@ function setGPACircularView() {
         if(gpaStartValue == gpaEndValue) {
             clearInterval(progress);
         }
-
     }, speed);
 
 }
