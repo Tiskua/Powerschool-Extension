@@ -13,7 +13,6 @@ function onWindowLoad() {
     }).then(function (results) {
         var parser = new DOMParser();
 	    var body = parser.parseFromString(results[0].result, 'text/html');
-        console.log(body)
         getData(body)
 
     }).catch(function (error) {
