@@ -3,6 +3,11 @@
   "name": "Powerschool Plus",
   "version": "1.0",
   "description": "Improve the look of Powerschool",
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
 
   "action": {
     "default_popup" : "main_popup/main_popup.html",
