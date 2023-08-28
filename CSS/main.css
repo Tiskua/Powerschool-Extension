@@ -5,6 +5,7 @@
     --bgColor: rgb(10, 10, 10);
     --secondaryBgColor: rgb(27,27,27);
     --bgGradient: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(22, 22, 22));
+    --themeColor: black;
 }
 
 #container { 
@@ -49,7 +50,7 @@ table.grid tbody tr:nth-child(odd)>td, table.linkDescList tbody tr:nth-child(odd
 }
 
 table.grid tr:nth-child(even)>td {
-    background-color: var(--bgColor) !important;
+    background-color: var(--themeColor) !important;
 }
 
 #nav-main li a {
