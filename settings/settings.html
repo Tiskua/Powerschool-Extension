@@ -10,11 +10,11 @@
 </head>
 <body>
     <h1>Settings</h1>
-    <a href="popup.html" class="back-btn"><i class="fa fa-arrow-left"></i></a>
+    <a href="../main_popup/main_popup.html" class="back-btn"><i class="fa fa-arrow-left"></i></a>
     <script defer src="settings.js" type="module"></script>
-    <div>
-        <form id="optionsForm">
-            <div class="checkbox-container">
+    <div class="settings-container">
+        <form id="attendanceForm">
+            <div class="checkbox-container setting">
                 <label class="switch attendance">
                     <input type="checkbox" name="attendance" id="attendance">
                     <span class="slider round"></span>
@@ -22,7 +22,10 @@
                 <div class="setting-label">Show Absent Columns</div>
             </div>
         </form>
+        <div class="setting">
+            <input type="color" id="theme" name="theme" value="#e66465" />
+            <div class="setting-label">Change Theme Color</div>
+        </div>
     </div>
-    
 </body>
 </html>
