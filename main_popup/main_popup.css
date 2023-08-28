@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     margin: 50px;
@@ -64,11 +60,14 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%;
-    background-color: rgb(8, 8, 8);
     border-radius: 10px;
     padding: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 50%;
+    background-color: rgb(8, 8, 8);
 }
+
 
 .info-list-txt {
     font-size: 1.6em;
@@ -76,12 +75,6 @@ body {
     line-height: 2rem;
 }
 
-.settings-btn {
-    position: absolute;
-    font-size: 3em;
-    text-decoration: none;
-    color: rgb(124, 124, 124);
-    bottom: 20px;
-    left: 20px;
+.tabs li:nth-child(1) {
+    background-color: rgb(14, 19, 80) !important;
 }
-  
