@@ -5,7 +5,8 @@
     --bgColor: rgb(10, 10, 10);
     --secondaryBgColor: rgb(27,27,27);
     --bgGradient: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(22, 22, 22));
-    --themeColor: black;
+    --themeColor: rgb(228, 228, 228);
+    --bgImage: "";
 }
 
 #container { 
@@ -50,7 +51,7 @@ table.grid tbody tr:nth-child(odd)>td, table.linkDescList tbody tr:nth-child(odd
 }
 
 table.grid tr:nth-child(even)>td {
-    background-color: var(--themeColor) !important;
+    background-color: var(--bgColor) !important;
 }
 
 #nav-main li a {
@@ -146,3 +147,12 @@ select, input {
 #legend strong {
     color: var(--textColor) !important;
 }
+
+a {
+    color: var(--themeColor) !important;
+}
+
+li:hover {
+    background-color: var(--themeColor) !important;
+}
+

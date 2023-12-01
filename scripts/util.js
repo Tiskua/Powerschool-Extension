@@ -10,9 +10,11 @@ export function getNeededPoints(earned, total) {
     let pointsAddedLetter = 0;
 
     while (parseInt(initialGrade) == parseInt(newGrade)) {
-        if(initialGrade >= 100) { break; }
+        if(initialGrade.toFixed() >= 100) { break; }
         pointsAddedPercent++;
-        newGrade = ((earned + pointsAddedPercent)/(total + pointsAddedPercent))*100;
+        console.log(newGrade)
+        newGrade = ((earned + pointsAddedPercent)/(total + pointsAddedPercent)*100).toFixed();
+        console.log(newGrade)
     }
 
     while (initialGradeLetter == newGradeLetter) {
@@ -47,7 +49,7 @@ export function getCourseName(body) {
 export function getScore(score) {
     score = score.trim()
     const scoreSplit = score.split("/")
-    if(scoreSplit[0].includes("--")) { return [0, 0]}
+    if(scoreSplit[0].includes("--")) { return [0.0, 0.0]}
     const earned = parseFloat(scoreSplit[0])
     const total = parseFloat(scoreSplit[1])
 

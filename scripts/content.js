@@ -3,6 +3,7 @@ const tbody = document.getElementsByTagName("tbody")[0];
 const trs = tbody.getElementsByTagName("tr");
 
 
+
 function replacePeriod(index) {
   const periodTD = trs[index].getElementsByTagName("td")[0];
   if(periodTD) {
@@ -110,13 +111,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
   } 
 });
 
-async function setRowsToThemeColor() {
-  let themeOptions = {}
-  const themeData = await chrome.storage.sync.get("themeOptions");
-  Object.assign(themeOptions, themeData);
-  const r = document.querySelector(':root');
-  r.style.setProperty('--themeColor', `${themeOptions.themeOptions.color}`);
-}
 
-setRowsToThemeColor()
+
+
 

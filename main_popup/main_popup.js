@@ -13,6 +13,7 @@ function onWindowLoad() {
         var activeTab = tabs[0];
         var activeTabId = activeTab.id;
         url = activeTab.url;
+        console.log(url)
         return chrome.scripting.executeScript({
             target: { tabId: activeTabId },
             func: DOMtoString,
@@ -21,6 +22,7 @@ function onWindowLoad() {
         
 
     }).then(function (results) {
+        
         var parser = new DOMParser();
 	    var body = parser.parseFromString(results[0].result, 'text/html');
         const courseButton = document.getElementById("course-btn").getElementsByTagName("a")[0];
@@ -32,11 +34,14 @@ function onWindowLoad() {
             courseLink.classList.add("link-disabled");
         }
 
+        if (!url.includes("home")) { 
+            return
+         }
+
         welcome.innerText = util.getStudentName(body)
         const gpa = util.getGPA(body);
-        gpaValue.innerText = gpa[0]
-        gradeAverageLabel.innerText = `Grade Average: ${gpa[1]}%`
-        setGPACircularView(gpa[0])
+        gradeAverageLabel.innerText = `Grade Average: ${gpa[1].toFixed(2)}%`
+        setGPACircularView(gpa[0].toFixed(2))
 
         classesLabel.innerText = "Number of Courses: " + util.getClassCount(body)
     }).catch(function (error) {
@@ -73,9 +78,9 @@ function setGPACircularView(gpa) {
 
         gpaValue.textContent = `${gpaStartValue/25}`
         const color = await util.getThemeColor()
-        console.log(color)
+        // const color = "red"
         circularGPA.style.background = `conic-gradient(${color} ${gpaStartValue * 3.6}deg, rgb(17, 17, 17) 0deg)`
-
+        
         if(gpaStartValue >= gpaEndValue) {
             clearInterval(progress);
             gpaValue.innerText = gpa;
