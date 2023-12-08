@@ -5,9 +5,12 @@ const welcome = document.querySelector('.welcome');
 const classesLabel = document.querySelector('.classes-label');
 const gpaValue = document.querySelector('.GPA-value');
 const gradeAverageLabel = document.querySelector('.grade-avg-label');
+<<<<<<< HEAD
 
 var term = 0
 var globalBody = null
+=======
+>>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
 
 function onWindowLoad() {
     
@@ -40,6 +43,7 @@ function onWindowLoad() {
         if (!url.includes("home")) { 
             return
          }
+<<<<<<< HEAD
 
          globalBody = body
 
@@ -50,6 +54,15 @@ function onWindowLoad() {
 
         classesLabel.innerText = "Number of Courses: " + util.getClassCount(body, term)
 
+=======
+
+        welcome.innerText = util.getStudentName(body)
+        const gpa = util.getGPA(body);
+        gradeAverageLabel.innerText = `Grade Average: ${gpa[1].toFixed(2)}%`
+        setGPACircularView(gpa[0].toFixed(2))
+
+        classesLabel.innerText = "Number of Courses: " + util.getClassCount(body)
+>>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     }).catch(function (error) {
         welcome.innerText = 'There was an error injecting script : \n' + error.message;
     });
@@ -99,6 +112,7 @@ if (await util.getThemeColor()) {
     r.style.setProperty('--themeColor', `${await util.getThemeColor()}`);
 }
 
+<<<<<<< HEAD
 
 // DropDown 
 
@@ -167,3 +181,5 @@ async function loadTerm() {
 }
 
 loadTerm()
+=======
+>>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07

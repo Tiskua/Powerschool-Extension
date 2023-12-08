@@ -3,6 +3,7 @@ const tbody = document.getElementsByTagName("tbody")[0];
 const trs = tbody.getElementsByTagName("tr");
 
 
+
 function replacePeriod(index) {
   const periodTD = trs[index].getElementsByTagName("td")[0];
   if(periodTD) {
