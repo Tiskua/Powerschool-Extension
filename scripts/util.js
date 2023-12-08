@@ -1,11 +1,7 @@
 export function getNeededPoints(earned, total) {
     const initialGrade = earned/total*100;
     const initialGradeLetter = findGradeLetter(initialGrade);
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
 
     let newGrade = initialGrade;
     let newGradeLetter = initialGradeLetter;
@@ -16,13 +12,7 @@ export function getNeededPoints(earned, total) {
     while (parseInt(initialGrade) == parseInt(newGrade)) {
         if(initialGrade.toFixed() >= 100) { break; }
         pointsAddedPercent++;
-<<<<<<< HEAD
         newGrade = ((earned + pointsAddedPercent)/(total + pointsAddedPercent)*100).toFixed();
-=======
-        console.log(newGrade)
-        newGrade = ((earned + pointsAddedPercent)/(total + pointsAddedPercent)*100).toFixed();
-        console.log(newGrade)
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     }
 
     while (initialGradeLetter == newGradeLetter) {
@@ -64,11 +54,7 @@ export function getScore(score) {
     return [earned, total]
 }
 
-<<<<<<< HEAD
 export function getGPA(body, term) {
-=======
-export function getGPA(body) {
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     const tbody = body.querySelector("tbody");
     let trs = tbody.getElementsByTagName("tr");
     const size = trs.length-1
@@ -77,14 +63,8 @@ export function getGPA(body) {
     let gradedClasses = 0;
     for (let i = 2; i < size; i++) {
         const tds = trs[i].getElementsByTagName("td");
-<<<<<<< HEAD
         const a = tds[12 + term].getElementsByTagName("a")[0];
         const className = formatClassName(tds).toLowerCase();
-=======
-        const a = tds[12].getElementsByTagName("a")[0];
-        const className = formatClassName(tds).toLowerCase();
-
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
         if(!a) { continue }
         const split = a.innerHTML.split("<br>");
         if(split.length != 2) { continue }
@@ -95,11 +75,7 @@ export function getGPA(body) {
         gradeAverage += grade;
         gradedClasses++;
     }    
-<<<<<<< HEAD
     if (gradedClasses == 0) { return [0,0] }
-=======
-    console.log(totalGPAS/gradedClasses)
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     return [totalGPAS/gradedClasses, gradeAverage/gradedClasses];
 }
 
@@ -134,7 +110,6 @@ export function findGPA(grade) {
     return GPA
 }
 
-<<<<<<< HEAD
 export function getClassCount(body, term) {
     const tbody = body.querySelector("tbody");
     let trs = tbody.getElementsByTagName("tr");
@@ -153,14 +128,6 @@ export function getClassCount(body, term) {
     }
 
     return count;
-=======
-export function getClassCount(body) {
-    const tbody = body.querySelector("tbody");
-    let trs = tbody.getElementsByTagName("tr");
-    const size = trs.length-3
-
-    return size;
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
 }
 
 
@@ -191,12 +158,9 @@ export async function getThemeColor() {
     let themeOptions = {}
     const themeData = await chrome.storage.sync.get("themeOptions");
     Object.assign(themeOptions, themeData);
-<<<<<<< HEAD
 
     if (themeOptions.themeOptions == null) {
         return "rgb(72, 158, 205)"
     }
-=======
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     return themeOptions.themeOptions.color
 }

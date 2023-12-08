@@ -7,14 +7,8 @@ const assignmentCountLabel = document.getElementById("assignment-count");
 const needPointLabel = document.getElementById("need-percent");
 const needLetterLabel = document.getElementById("need-letter");
 
-<<<<<<< HEAD
-=======
-console.log("CHECK 1")
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
 
 function onWindowLoad() {
-    console.log("CHECK 2")
-
     const h1 = document.getElementsByTagName("h1");
     let url = "";  
     chrome.tabs.query({ active: true, currentWindow: true }).then(function (tabs) {
@@ -22,11 +16,6 @@ function onWindowLoad() {
         var activeTabId = activeTab.id;
         url = activeTab.url;
 
-<<<<<<< HEAD
-=======
-        console.log("CHECK 1")
-
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
         return chrome.scripting.executeScript({
             target: { tabId: activeTabId },
             func: DOMtoString,
@@ -51,10 +40,6 @@ window.onload = onWindowLoad
 
 
 function getData(body) {
-<<<<<<< HEAD
-=======
-    console.log("GETTING DATA");
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     const tbody = body.getElementsByTagName("tbody")[1];
     const trs = tbody.getElementsByTagName("tr");
 
@@ -67,23 +52,12 @@ function getData(body) {
         const scoreText = tds[10].innerText;
 
         const scores = util.getScore(scoreText);
-<<<<<<< HEAD
         earnedPoints += scores[0];
         totalPoints += scores[1];
     }
     const grade = earnedPoints/totalPoints*100
     const gradeLetter = util.findGradeLetter(grade);
 
-=======
-        console.log(scores);
-        earnedPoints += scores[0];
-        totalPoints += scores[1];
-    }
-    console.log(earnedPoints + " : " + totalPoints)
-    const grade = earnedPoints/totalPoints*100
-    const gradeLetter = util.findGradeLetter(grade);
-    console.log("Check 4")
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
     gradeLabel.innerText = `Grade: ${grade.toFixed(2)} (${gradeLetter})`;
     assignmentCountLabel.innerText = `Assignments: ${trs.length-1}`;
     pointsLabel.innerText = `Points: ${earnedPoints}/${totalPoints}`;

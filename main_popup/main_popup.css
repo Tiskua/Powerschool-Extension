@@ -62,16 +62,9 @@ body {
     justify-content: center;
     border-radius: 10px;
     padding: 20px;
-<<<<<<< HEAD
     justify-content: center;
     background-color: rgb(8, 8, 8);
     transform: translateY(-30px);
-=======
-    margin-bottom: 20px;
-    justify-content: center;
-    width: 50%;
-    background-color: rgb(8, 8, 8);
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
 }
 
 
@@ -83,7 +76,6 @@ body {
 
 .tabs li:nth-child(1) {
     background-color: rgb(14, 19, 80) !important;
-<<<<<<< HEAD
 }
 
 
@@ -178,6 +170,4 @@ body {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-=======
->>>>>>> 1e89a9d090b166f8850fcc1bb73b7b2c5d5dbc07
 }

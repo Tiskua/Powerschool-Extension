@@ -147,3 +147,15 @@ select, input {
 #legend strong {
     color: var(--textColor) !important;
 }
+
+a {
+    color: var(--themeColor) !important;
+}
+
+li:hover {
+    background-color: var(--themeColor) !important;
+}
+
+#sessiontimeoutwarning #sessiontimeoutwarningBox {
+    background: var(--bgColor) !important;
+}
