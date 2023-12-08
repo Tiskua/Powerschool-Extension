@@ -1,0 +1,46 @@
+:root {
+    --themeColor: rgb(14, 44, 109);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.settings-btn {
+    position: absolute;
+    font-size: 3em;
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+    bottom: 15px;
+    left: 15px;
+}
+
+.tabs {
+    display: none;
+    margin-top: 5px;
+    float: right;
+}
+
+.tabs li {
+    padding: 1rem 1.5rem;
+    display: inline;
+    background-color: var(--secondaryBgColor);
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+.tabs li a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.link-disabled {
+    pointer-events: none;
+}

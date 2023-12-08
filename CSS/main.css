@@ -5,6 +5,8 @@
     --bgColor: rgb(10, 10, 10);
     --secondaryBgColor: rgb(27,27,27);
     --bgGradient: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(22, 22, 22));
+    --themeColor: rgb(228, 228, 228);
+    --bgImage: "";
 }
 
 #container { 
@@ -144,4 +146,16 @@ select, input {
 #legend p,
 #legend strong {
     color: var(--textColor) !important;
+}
+
+a {
+    color: var(--themeColor) !important;
+}
+
+li:hover {
+    background-color: var(--themeColor) !important;
+}
+
+#sessiontimeoutwarning #sessiontimeoutwarningBox {
+    background: var(--bgColor) !important;
 }

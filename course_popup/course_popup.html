@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="course_popup.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/base.css" />
+
     <title>Info</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+ 
 </head>
 <body>
   <script defer src="course_popup.js" type="module"></script>
     <div class="main">
       <h1>Course</h1>
       <div class="container">
-        <ul class="tabs">
-          <li><a>General</a></li>
-          <li><a href="../course_popup/course_popup.html" id="course-btn">Course</a></li>
-        </ul>
-        <div class="info-list">    
-          <span class="info-list-txt classes-label">Assignments:</span>
-          <span class="info-list-txt classes-label">Points:</span>
-          <span class="info-list-txt classes-label">Need (%):</span>
-          <span class="info-list-txt classes-label">Need (L):</span>
-          <span class="info-list-txt classes-label">GPA:</span>
-        </div>
+        <div class="info-list">   
+          <div class="part">
+            <span class="info-list-txt classes-label" id="grade">Grade: --</span>
+            <span class="info-list-txt classes-label" id="points">Points: --</span>
+            <span class="info-list-txt classes-label" id="assignment-count">Assignments: --</span>
+          </div> 
+          <div class="part"> 
+            <span class="info-list-txt classes-label" id="need-percent">Need (%): --</span>
+            <span class="info-list-txt classes-label" id="need-letter">Need (L): --</span>
+          </div>
       </div>
-        <a href="settings.html" class="settings-btn"><i class="fa fa-cog"></i></a> 
-      </button>
-    </div>
+        <a href="../settings/settings.html" class="settings-btn"><i class="fa fa-cog"></i></a> 
+      </div>
     </div>
 
 </body>

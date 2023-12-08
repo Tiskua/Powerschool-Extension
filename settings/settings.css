@@ -14,6 +14,13 @@ h1 {
     font-size: 3em;
 }
 
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
 #optionsForm {
     display: flex;
     flex-direction: column;
@@ -21,16 +28,21 @@ h1 {
     padding: 2rem;
 }
 
-.checkbox-container {
+.setting {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 5rem;
+    position: relative;
     
 }
 
 .setting-label {
     font-size: 1.3em;
     font-weight: bold;
+    position: absolute;
+    left: 200px;
+    text-align: left;
+
 }
 
 .switch {
@@ -100,3 +112,22 @@ input:checked + .slider:before {
     left: 1rem;
     font-size: 1.7em;
 }
+
+#theme {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #theme::-webkit-color-swatch {
+    border-radius: 5px;
+    border: none;
+  }
+  #theme::-moz-color-swatch {
+    border-radius: 5px;
+    border: none;
+  }

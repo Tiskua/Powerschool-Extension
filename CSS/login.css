@@ -1,20 +1,17 @@
 :root {
     --textColor: rgb(219, 219, 219);
-    --bgColor: black;
+    --bgColor: rgb(17, 17, 17);
     --secondaryBgColor: rgb(27,27,27);
-    --bgGradient: linear-gradient(to bottom right, rgb(27, 27, 27), rgb(46, 46, 46));
 }
 
 
 body {
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: left top !important;
-    background-image: var(--bgGradient) !important;
+    background-color: var(--bgColor) !important;
     color: var(--textColor) !important;
 }
 
 .pslogin #content {
+    transform: translateY(10%);
     background-color: var(--secondaryBgColor) !important;
     border-radius: 10px;
 }

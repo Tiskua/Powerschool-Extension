@@ -3,6 +3,11 @@
   "name": "Powerschool Plus",
   "version": "1.0",
   "description": "Improve the look of Powerschool",
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
 
   "action": {
     "default_popup" : "main_popup/main_popup.html",
@@ -31,11 +36,18 @@
         "https://powerschool.hermitagesd.net/guardian/home*"
       ],
       "css" : ["CSS/main.css"]
+    },
+    {
+      "js": ["scripts/global.js"],
+      "matches": [
+        "https://powerschool.hermitagesd.net/guardian/*"
+      ],
+      "css" : ["CSS/main.css"]
     }
   ],
   "permissions": [
     "storage",
     "scripting",
-    "activeTab"    
+    "activeTab"
   ]
 }

@@ -1,3 +1,4 @@
+
 const tbody = document.getElementsByTagName("tbody")[0];
 const trs = tbody.getElementsByTagName("tr");
 
@@ -6,10 +7,11 @@ function replacePeriod(index) {
   const periodTD = trs[index].getElementsByTagName("td")[0];
   if(periodTD) {
     const txt = periodTD.innerText 
-    const formattedTxt = txt.replace("P", "Period ")
+    const formattedTxt = txt.replaceAll("P", " Period ")
       .replace("(1-2)", " (Every Day)")
       .replace("(1)", " (Day 1)")
       .replace("(2)", " (Day 2)")
+      .replace("- ", " - ")
     
     const re = /\d{1,2}-\d{1,2}/g
     const matches = formattedTxt.match(re)
@@ -24,7 +26,7 @@ function replacePeriod(index) {
       periodTD.innerText = samePeriodTxt;
       
     } else {
-      periodTD.innerText = formattedTxt;
+      periodTD.innerText = formattedTxt.trim();
     } 
   } 
 }
@@ -102,9 +104,13 @@ function toggleShowAbsent(show) {
 }
 
 chrome.storage.onChanged.addListener((changes, area) => {
-  console.log(changes)
   if (area === 'sync') {
     const showAbsent = Boolean(changes.options.newValue.showAttendance);
     toggleShowAbsent(showAbsent)
   } 
 });
+
+
+
+
+
