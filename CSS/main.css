@@ -1,22 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 :root {
     --textColor: rgb(219, 219, 219);
     --bgColor: rgb(10, 10, 10);
     --secondaryBgColor: rgb(27,27,27);
-    --bgGradient: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(22, 22, 22));
-    --themeColor: rgb(228, 228, 228);
+    --themeColor: rgb(0, 0, 0);
     --bgImage: "";
+    --overColor: rgb(255, 255, 255)
+
 }
 
 #container { 
     background-color: var(--bgColor);
-    
 }
 
 body {
     color: var(--textColor) !important;
-    font-family: 'Poppins', sans-serif !important;
     background-color: var(--bgColor) !important;
     background-image: none !important;
 }
@@ -43,7 +42,7 @@ ul.tabs li.selected, li.ui-tabs-selected, div.tabs ul.ui-tabs-nav li.ui-state-ac
 }
 
 #nav-main li.selected {
-    background-color: var(--secondaryBgColor)
+    background-color: var(--themeColor) !important;
 }
 
 table.grid tbody tr:nth-child(odd)>td, table.linkDescList tbody tr:nth-child(odd)>td {
@@ -60,7 +59,7 @@ table.grid tr:nth-child(even)>td {
 }
 
 table.grid td {
-    padding: 30px 15px !important;
+    padding: 20px 15px !important;
 }
 
 #header {
@@ -101,9 +100,6 @@ ul.tabs li a {
     font-weight: bold;
 }
 
-#nav-main li.selected, #nav-main-frame li.selected {
-    background-color: var(--secondaryBgColor) !important;
-}
 
 
 #psDialog {
@@ -152,10 +148,73 @@ a {
     color: var(--themeColor) !important;
 }
 
-li:hover {
+#nav-main li:hover {
     background-color: var(--themeColor) !important;
 }
 
 #sessiontimeoutwarning #sessiontimeoutwarningBox {
     background: var(--bgColor) !important;
+}
+
+#portalHeader div {
+    background-color: var(--secondaryBgColor) !important;
+    color: var(--textColor)
+}
+
+#students-list li.selected a, #students-list li:hover a {
+    background-color: var(--secondaryBgColor) !important;
+}
+
+#ui-id-2 {
+    color: var(--themeColor);
+}
+
+@keyframes flicker {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+
+    }
+}
+
+@keyframes flicker2 {
+    from {
+      transform: translateY(-100%);
+
+      
+    }
+    to {
+        transform: translateY(100%);
+
+    }
+}
+
+.over {
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: var(--overColor) !important;
+    z-index: 1000 !important;
+    animation-duration: 100ms;
+    animation-name: flicker;
+    animation-iteration-count: infinite;
+    display: none;
+}
+
+.over2 {
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: var(--overColor) !important;
+    z-index: 1000 !important;
+    animation-duration: 100ms;
+    animation-name: flicker2;
+    animation-iteration-count: infinite;
+    display: none;
 }

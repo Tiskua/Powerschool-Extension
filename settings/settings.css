@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
 
     background-color: black;
-    width: 600px;
+    width: 700px;
     height: 100px;
     color: white;
 }
@@ -14,6 +14,21 @@ h1 {
     font-size: 3em;
 }
 
+#urlForm input {
+    width: 150px;
+    padding: 5px 2px;
+    border-radius: 5px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color:white;
+    position: absolute;
+    top: 2.3rem;
+    left: 1rem;
+    font-size: 1.7em;
+}
+
 .settings-container {
     display: flex;
     flex-direction: column;
@@ -21,20 +36,20 @@ h1 {
     padding: 1.5rem;
 }
 
-#optionsForm {
+.switch-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding: 2rem;
+    gap: 1rem;
 }
 
-.setting {
+
+.checkbox-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
     position: relative;
-    
+    align-items: center;
 }
+
 
 .setting-label {
     font-size: 1.3em;
@@ -104,16 +119,23 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.back-btn {
-    text-decoration: none;
-    color:white;
-    position: absolute;
-    top: 2.3rem;
-    left: 1rem;
-    font-size: 1.7em;
+
+.color-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#theme {
+.color-settings > div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+
+}
+
+
+.colorPicker {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -123,11 +145,15 @@ input:checked + .slider:before {
     border: none;
     cursor: pointer;
   }
-  #theme::-webkit-color-swatch {
+  .colorPicker::-webkit-color-swatch {
     border-radius: 5px;
     border: none;
+    
+    /* box-shadow: 3px 3px rgb(30, 30, 30); */
   }
-  #theme::-moz-color-swatch {
+  .colorPicker::-moz-color-swatch {
     border-radius: 5px;
     border: none;
+    /* box-shadow: 3px 3px rgb(30, 30, 30); */
+
   }

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Powerschool Plus",
-  "version": "1.0",
-  "description": "Improve the look of Powerschool",
+  "version": "1.2.0",
+  "description": "Improve the look and functionality of Powerschool",
   "icons": {
     "16": "images/logo.png",
     "48": "images/logo.png",
@@ -13,37 +13,34 @@
     "default_popup" : "main_popup/main_popup.html",
     "default_title": "General Information"
   },
-
+  "web_accessible_resources": [{
+    "resources": ["CSS/main.css", "CSS/login.css"],
+    "matches": ["<all_urls>"]
+  }],
   "content_scripts": [
     {
+      "js": ["scripts/loginCSS.js"],
       "matches": [
         "https://powerschool.hermitagesd.net/public/*"
-      ],
+      ]
 
-      "css" : ["CSS/login.css"]
-    },
-    {
-      
-      "matches": [
-        "https://powerschool.hermitagesd.net/guardian/*"
-      ],
-
-      "css" : ["CSS/main.css"]
-    },
-    {
-      "js": ["scripts/content.js"],
-      "matches": [
-        "https://powerschool.hermitagesd.net/guardian/home*"
-      ],
-      "css" : ["CSS/main.css"]
     },
     {
       "js": ["scripts/global.js"],
       "matches": [
         "https://powerschool.hermitagesd.net/guardian/*"
       ],
-      "css" : ["CSS/main.css"]
+
+      "css" : ["CSS/base.css"]
+    },
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://powerschool.hermitagesd.net/guardian/home*"
+      ],
+      "css" : ["CSS/base.css"]
     }
+    
   ],
   "permissions": [
     "storage",

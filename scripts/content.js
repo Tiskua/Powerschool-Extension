@@ -92,7 +92,7 @@ async function setSettingValues() {
   let options = {}
   const data = await chrome.storage.sync.get("options");
   Object.assign(options, data.options);
-  toggleShowAbsent(Boolean(options.showAttendance))
+  toggleShowAbsent(Boolean(options.showAbsent))
 }
 setSettingValues()
 
@@ -105,7 +105,7 @@ function toggleShowAbsent(show) {
 
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'sync') {
-    const showAbsent = Boolean(changes.options.newValue.showAttendance);
+    const showAbsent = Boolean(changes.options.newValue.showAbsent);
     toggleShowAbsent(showAbsent)
   } 
 });

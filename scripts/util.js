@@ -8,8 +8,8 @@ export function getNeededPoints(earned, total) {
 
     let pointsAddedPercent = 0;
     let pointsAddedLetter = 0;
-
-    while (parseInt(initialGrade) == parseInt(newGrade)) {
+    
+    while (Math.round(initialGrade) == Math.round(newGrade)) {
         if(initialGrade.toFixed() >= 100) { break; }
         pointsAddedPercent++;
         newGrade = ((earned + pointsAddedPercent)/(total + pointsAddedPercent)*100).toFixed();
@@ -160,7 +160,48 @@ export async function getThemeColor() {
     Object.assign(themeOptions, themeData);
 
     if (themeOptions.themeOptions == null) {
-        return "rgb(72, 158, 205)"
+        return "#489ECD"
     }
     return themeOptions.themeOptions.color
+}
+
+export async function getBackgroundColor() {
+    let themeOptions = {}
+    const themeData = await chrome.storage.sync.get("themeOptions");
+    Object.assign(themeOptions, themeData);
+
+    if (themeOptions.themeOptions == null || themeOptions.themeOptions.bg == null) {
+        return "#0A0A0A"
+    }
+    return themeOptions.themeOptions.bg
+}
+
+export async function getSecondBackgroundColor() {
+    let themeOptions = {}
+    const themeData = await chrome.storage.sync.get("themeOptions");
+    Object.assign(themeOptions, themeData);
+
+    if (themeOptions.themeOptions == null) {
+        return "#1B1B1B"
+    }
+    return themeOptions.themeOptions.secondBG
+}
+
+export async function getTextColor () {
+    let themeOptions = {}
+    const themeData = await chrome.storage.sync.get("themeOptions");
+    Object.assign(themeOptions, themeData);
+
+    if (themeOptions.themeOptions == null) {
+        return "#DBDBDB"
+    }
+    return themeOptions.themeOptions.text
+}
+
+export function safeURL(url) {
+    if(url.includes("https://")) {
+        return url
+    } else {
+        return "https://" + url
+    }
 }

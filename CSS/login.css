@@ -4,7 +4,6 @@
     --secondaryBgColor: rgb(27,27,27);
 }
 
-
 body {
     background-color: var(--bgColor) !important;
     color: var(--textColor) !important;
